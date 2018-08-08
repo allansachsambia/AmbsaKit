@@ -1,0 +1,5 @@
+{
+  "ignore": ["node-modules/**"],
+  "presets": ["env", "react"],
+  "plugins": ["transform-react-jsx"]
+}
