@@ -1,3 +1,3 @@
-## Ambsa Hero
+## Ambsa Kit
 
-A collection of react components commonly used in web development.
+A collection of react components for general use in web development.
