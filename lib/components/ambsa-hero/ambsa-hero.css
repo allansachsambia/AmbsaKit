@@ -1,0 +1,118 @@
+.ambsa-hero {
+  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 1000px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.ambsa-hero[data-children="false"] {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.ambsa-hero[data-children="true"] .ambsa-hero-inner-wrap {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.ambsa-hero-inner-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.ambsa-hero-contents {
+  max-width: 1012px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ambsa-hero[data-children="true"] .ambsa-hero-contents > * {
+  padding: 24px;
+}
+
+.ambsa-hero .ambsa-hero-inner-wrap[data-brightness="lighter"] {
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.ambsa-hero .ambsa-hero-inner-wrap[data-brightness="light"] {
+  background-color: rgba(255, 255, 255, .35);
+}
+
+.ambsa-hero .ambsa-hero-inner-wrap[data-brightness="dark"] {
+  background-color: rgba(0, 0, 0, .35);
+}
+
+.ambsa-hero .ambsa-hero-inner-wrap[data-brightness="darker"] {
+  background-color: rgba(0, 0, 0, .75);
+}
+
+/* Medium
+   ========================================================================== */
+
+@media (max-width: 1300px) {
+  .ambsa-hero[data-stick="left"] {
+    background-position: left;
+  }
+
+  .ambsa-hero[data-stick="center"] {
+    background-position: center;
+  }
+
+  .ambsa-hero[data-stick="right"] {
+    background-position: right;
+  }
+}
+
+/* Small
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .ambsa-hero {
+    text-align: center;
+  }
+
+  .ambsa-hero[data-children="true"] .ambsa-hero-inner-wrap {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  .ambsa-hero .ambsa-hero-inner-wrap .ambsa-hero-contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* Extra Small
+   ========================================================================== */
+
+@media (max-width: 700px) {
+  .ambsa-hero[data-children="true"] .ambsa-hero-inner-wrap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Print
+   ========================================================================== */
+
+@media print {
+}
