@@ -43,7 +43,150 @@
 
 
     <section>
-        <article><h2>Ambsa Kit</h2><p>A collection of react components for general use in web development.</p></article>
+        <article><p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/ambsakit-logo.png?raw=true" alt="image"></p>
+<h1>Ambsa Kit</h1><p>React components for web development.</p>
+<h2>Contents</h2><ul>
+<li><a href="#AmbsaHero">AmbsaHero</a></li>
+<li><a href="#AmbsaFooter">AmbsaFooter</a></li>
+<li><a href="#Installation">Installation</a></li>
+<li><a href="Example">Example</a></li>
+</ul>
+<h2>AmbsaHero</h2><p>A hero wrapper.</p>
+<p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-hero/with-children/desktop.png?raw=true" alt="image"></p>
+<h4>Use</h4><pre class="prettyprint source"><code>import { AmbsaHero } from &quot;ambsa-kit&quot;;
+
+export default class Index extends React.Component {
+  render() {
+    const image = &quot;https://picsum.photos/1800/1224/?random&quot;;  
+    return (
+      &lt;div>
+        &lt;AmbsaHero image={image} stick=&quot;right&quot; brightness=&quot;lighter&quot;>
+          &lt;div>
+            &lt;h1 className=&quot;ambsa-hero-display&quot;>Ambsa Hero&lt;/h1>
+            &lt;p className=&quot;ambsa-hero-lead&quot;>
+              Maecenas gravida, sem id tincidunt aliquam, lorem nunc vulputate
+              mauris, non gravida arcu nisi quis tellus. Integer euismod
+              molestie elit, et euismod felis tristique et. Proin tristique
+              tempor erat, nec scelerisque diam varius quis. Ut convallis mi non
+              tortor egestas vulputate. Maecenas eu varius dui. Duis eget augue
+              nec orci fringilla bibendum.
+            &lt;/p>
+          &lt;/div>
+        &lt;/AmbsaHero>
+      &lt;/div>
+    );
+  }
+}</code></pre><h4>Properties</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">image</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">optional; background image url</td>
+</tr>
+<tr>
+<td style="text-align:left">stick</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">optional; background-position position helper for the background image limited to max-width: 1300px.  Options: '<strong><em>left</em></strong>', '<strong><em>center</em></strong>', and '<strong><em>right</em></strong>'</td>
+</tr>
+<tr>
+<td style="text-align:left">brightness</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">optional; sets the brightness of the background image. Options: '<strong><em>darker</em></strong>', '<strong><em>dark</em></strong>', '<strong><em>light</em></strong>', and '<strong><em>lighter</em></strong>'.</td>
+</tr>
+</tbody>
+</table>
+<h2>AmbsaFooter</h2><p>A footer wrapper</p>
+<p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-footer/desktop.png?raw=true" alt="image"></p>
+<h4>Use</h4><p>AmbsaFooter takes two values as attributes: <code>about</code> adds content under
+the about section, and <code>copyright</code> adds copyright content to the bottom of
+the page.  Both should be of type <code>String</code>.  AmbsaFooter also accepts nested
+content and expects two div elements with specific classNames, the first is
+<code>explore</code>, the second is <code>icons</code>.  The element with the explore className should
+have nested spans as children which themselves contain links related to the
+site.  The icons section expects links that wrap icons.  FontAwesome works
+well but incorporating it is optional.</p>
+<pre class="prettyprint source"><code>import { AmbsaFooter } from &quot;ambsa-kit&quot;;
+
+export default class Index extends React.Component {
+  render() {
+    const about = &quot;Qui ipsum elit ex fabulas.&quot;;
+    const copyright = &quot;Copyright © 2018 Allan Sachs-Ambia&quot;;
+    return (
+      &lt;div>
+      &lt;AmbsaFooter about={about} copyright={copyright}>
+        &lt;div className=&quot;explore&quot;>
+          &lt;span>
+            &lt;i className=&quot;fa fa-angle-right&quot; />
+            &lt;a href=&quot;http://tinytuba.com/&quot;>Tiny Tuba&lt;/a>
+          &lt;/span>
+          &lt;span>
+            &lt;i className=&quot;fa fa-angle-right&quot; />
+            &lt;a href=&quot;http://heeeeeeeey.com/&quot;>Heeeeeeeey&lt;/a>
+          &lt;/span>
+          &lt;span>
+            &lt;i className=&quot;fa fa-angle-right&quot; />
+            &lt;a href=&quot;http://endless.horse/&quot;>Endless Horse&lt;/a>
+          &lt;/span>
+          &lt;span>
+            &lt;i className=&quot;fa fa-angle-right&quot; />
+            &lt;a href=&quot;http://www.fallingfalling.com/&quot;>Falling&lt;/a>
+          &lt;/span>
+          &lt;span>
+            &lt;i className=&quot;fa fa-angle-right&quot; />
+            &lt;a href=&quot;http://beesbeesbees.com/&quot;>Bees Bees Bees&lt;/a>
+          &lt;/span>
+        &lt;/div>
+        &lt;div className=&quot;icons&quot;>
+          &lt;a href=&quot;http://www.mail.com&quot;>
+            &lt;i className=&quot;fa fa-envelope&quot; aria-hidden=&quot;true&quot; />
+          &lt;/a>
+          &lt;a href=&quot;http://www.facebook.com&quot;>
+            &lt;i className=&quot;fa fa-facebook&quot; aria-hidden=&quot;true&quot; />
+          &lt;/a>
+          &lt;a href=&quot;http://www.twitter.com&quot;>
+            &lt;i className=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot; />
+          &lt;/a>
+          &lt;a href=&quot;http://www.instagram.com&quot;>
+            &lt;i className=&quot;fa fa-instagram&quot; aria-hidden=&quot;true&quot; />
+          &lt;/a>
+        &lt;/div>
+      &lt;/AmbsaFooter>
+      &lt;/div>
+    );
+  }
+}</code></pre><h4>Properties</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">about</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">optional; a short website description</td>
+</tr>
+<tr>
+<td style="text-align:left">copyright</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">optional; copyright text</td>
+</tr>
+</tbody>
+</table>
+<h4>Installation</h4><p>To install:</p>
+<pre class="prettyprint source"><code>npm install ambsa-kit</code></pre><h4>Example</h4><p>To build an example locally:</p>
+<p>Clone the project:</p>
+<pre class="prettyprint source"><code>git clone https://github.com/allansachsambia/AmbsaKit.git</code></pre><p>Go into the AmbsaKit directory and run:</p>
+<pre class="prettyprint source"><code>npm run start</code></pre><p>Go to <code>http://localhost:8000/</code> in your web browser.</p></article>
     </section>
 
 
@@ -60,7 +203,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Aug 09 2018 19:33:03 GMT-0400 (EDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Aug 13 2018 20:11:48 GMT-0400 (EDT)
 </footer>
 
 <script> prettyPrint(); </script>
