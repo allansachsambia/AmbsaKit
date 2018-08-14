@@ -7,7 +7,7 @@ React components for web development.
 ### Table of Contents
 
 - [Installation](#installation)
-- [Example](example)
+- [Example](#example)
 - [AmbsaHero](#ambsa-hero)
 - [AmbsaFooter](#ambsa-footer)
 
