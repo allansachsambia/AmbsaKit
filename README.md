@@ -4,16 +4,45 @@
 
 React components for web development.
 
-## Contents
+### Table of Contents
 
-- [AmbsaHero](#AmbsaHero)
-- [AmbsaFooter](#AmbsaFooter)
-- [Installation](#Installation)
-- [Example](Example)
+- [Installation](#installation)
+- [Example](example)
+- [AmbsaHero](#ambsa-hero)
+- [AmbsaFooter](#ambsa-footer)
 
-## AmbsaHero
+### Installation
 
-A hero wrapper.
+To install:
+
+```
+npm install ambsa-kit
+```
+
+### Example
+
+To build an example locally first clone the project:
+
+```
+git clone https://github.com/allansachsambia/AmbsaKit.git
+```
+
+Change directories into the AmbsaKit project and install the required
+modules:
+
+```
+npm install
+```
+
+Run the example project server:
+
+```
+npm run start
+```
+
+Go to `http://localhost:8000/` in your web browser.
+
+### Ambsa Hero
 
 ![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-hero/with-children/desktop.png?raw=true)
 
@@ -54,9 +83,7 @@ image           | String                | optional; background image url
 stick           | String                | optional; background-position position helper for the background image limited to max-width: 1300px.  Options: '***left***', '***center***', and '***right***'
 brightness      | String                | optional; sets the brightness of the background image. Options: '***darker***', '***dark***', '***light***', and '***lighter***'.
 
-## AmbsaFooter
-
-A footer wrapper
+## Ambsa Footer
 
 ![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-footer/desktop.png?raw=true)
 
@@ -130,35 +157,3 @@ Property        |       Type            |       Description
 :---------------|:----------------------|:--------------------------------
 about           | String                | optional; a short website description
 copyright       | String                | optional; copyright text
-
-
-
-
-
-
-
-#### Installation
-
-To install:
-
-```
-npm install ambsa-kit
-```
-
-#### Example
-
-To build an example locally:
-
-Clone the project:
-
-```
-git clone https://github.com/allansachsambia/AmbsaKit.git
-```
-
-Go into the AmbsaKit directory and run:
-
-```
-npm run start
-```
-
-Go to `http://localhost:8000/` in your web browser.
