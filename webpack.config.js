@@ -5,7 +5,7 @@ module.exports = {
   context: path.resolve(__dirname, "examples/src"),
   mode: "development",
   entry: {
-    app: "./Index.js"
+    app: "./App.js"
   },
   output: {
     filename: "bundle.js",
@@ -13,6 +13,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, "examples/src"),
+    historyApiFallback: true,
     disableHostCheck: true,
     port: 8000,
     host: "0.0.0.0"
