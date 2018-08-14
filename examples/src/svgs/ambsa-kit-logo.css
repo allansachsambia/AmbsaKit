@@ -1,0 +1,43 @@
+.ambsa-kit .ambsa-kit-logo {
+  fill: none;
+  stroke: #555555;
+  stroke-width: 1px !important;
+}
+
+.ambsa-kit .ambsa-kit-logo .iris,
+.ambsa-kit .ambsa-kit-logo .head-and-body {
+  fill: #000000;
+}
+
+.ambsa-kit .ambsa-kit-logo .eyes,
+.ambsa-kit .ambsa-kit-logo .eyeball {
+  fill: #ffffff;
+}
+
+.ambsa-kit .ambsa-kit-logo .whiskers {
+  stroke: #555555;
+}
+
+.ambsa-kit .ambsa-kit-logo .ball-of-yarn {
+  stroke: #555555;
+}
+
+/* Medium
+   ========================================================================== */
+@media (max-width: 1300px) {
+}
+
+/* Small
+   ========================================================================== */
+@media (max-width: 900px) {
+}
+
+/* Extra Small
+   ========================================================================== */
+@media (max-width: 700px) {
+}
+
+/* Print
+   ========================================================================== */
+@media print {
+}

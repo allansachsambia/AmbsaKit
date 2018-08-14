@@ -1,0 +1,61 @@
+.ambsa-kit .ambsa-hero {
+  color: #6f6f6f;
+}
+
+.ambsa-kit .ambsa-hero .ambsa-hero-display {
+  font-size: 55px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.ambsa-kit .ambsa-hero .ambsa-hero-lead {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.ambsa-kit .ambsa-hero .button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Medium
+   ========================================================================== */
+@media (max-width: 1300px) {
+  .ambsa-kit .ambsa-hero .ambsa-hero-display {
+    font-size: 40px;
+  }
+}
+
+/* Small
+   ========================================================================== */
+@media (max-width: 900px) {
+  .ambsa-kit .ambsa-hero .ambsa-hero-display {
+    font-size: 37.5px;
+  }
+
+  .ambsa-kit .ambsa-hero-lead {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+/* Extra Small
+   ========================================================================== */
+@media (max-width: 700px) {
+}
+
+/* Print
+   ========================================================================== */
+@media print {
+}
