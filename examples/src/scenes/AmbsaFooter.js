@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import AmbsaFooter from "./../../../src/components/ambsa-footer/AmbsaFooter";
+import { AmbsaFooter } from "./../../../src/";
 import ExampleHeader from "./../components/ExampleHeader";
 import ExampleFooter from "./../components/ExampleFooter";
 import Styles from "./ambsa-footer.css";
