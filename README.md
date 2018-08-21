@@ -10,6 +10,7 @@ React components for web development.
 - [Example](#example)
 - [AmbsaHero](#ambsa-hero)
 - [AmbsaFooter](#ambsa-footer)
+- [AmbsaNav](#ambsa-nav)
 
 ### Installation
 
@@ -27,20 +28,11 @@ To build an example locally first clone the project:
 git clone https://github.com/allansachsambia/AmbsaKit.git
 ```
 
-Change directories into the AmbsaKit project and install the required
-modules:
+### CodeSandbox Links with Examples
 
-```
-npm install
-```
-
-Run the example project server:
-
-```
-npm run start
-```
-
-Go to `http://localhost:8000/` in your web browser.
+- [AmbsaHero](https://codesandbox.io/s/w79zppvv7l)
+- [AmbsaFooter](https://codesandbox.io/s/zrz5rjjw6x)
+- AmbsaNav ...Pending
 
 ### Ambsa Hero
 
@@ -49,7 +41,7 @@ Go to `http://localhost:8000/` in your web browser.
 #### Use
 
 ```
-import { AmbsaHero } from "ambsa-kit";
+import { AmbsaNav } from "ambsa-kit";
 
 export default class Index extends React.Component {
   render() {
@@ -157,3 +149,60 @@ Property        |       Type            |       Description
 :---------------|:----------------------|:--------------------------------
 about           | String                | optional; a short website description
 copyright       | String                | optional; copyright text
+
+## Ambsa Nav
+
+<!-- Pending -->
+![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-nav/ambsa-nav-closed.png?raw=true)
+
+![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-nav/ambsa-nav-opened.png?raw=true)
+
+#### Use
+
+AmbsaNav takes one prop named 'brand' which expects an image wrapped in jsx.  
+This element can be resized and styled. The child elements passed in will end
+up as the content in the center of the menu area after the pancake button has
+been clicked and the navbar expanded, for example: a list of links, with a
+title.
+
+```
+import BallOfYarn from "./../svgs/BallOfYarn";
+import { AmbsaNav } from "ambsa-kit";
+
+export default function App() {
+  return (
+    <div className="ambsa-kit">
+      <AmbsaNav brand={<BallOfYarn />}>
+        <div className="menu-title">MENU</div>
+        <ul>
+          <li className="item">
+            <a href="#">LINK 1</a>
+          </li>
+          <li className="item">
+            <a href="#">LINK 2</a>
+          </li>
+          <li className="item">
+            <a href="#">LINK 3</a>
+          </li>
+          <li className="item">
+            <a href="#">LINK 4</a>
+          </li>
+          <li className="item">
+            <a href="#">LINK 5</a>
+          </li>
+          <li className="item">
+            <a href="#">LINK 6</a>
+          </li>
+        </ul>
+      </AmbsaNav>
+    </div>
+  );
+}
+
+```
+
+#### Properties
+
+Property        |       Type            |       Description
+:---------------|:----------------------|:--------------------------------
+brand           | Object                | optional; an image wrapped in JSX
