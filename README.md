@@ -2,6 +2,7 @@
 
 # Ambsa Kit
 
+[![Build Status](https://travis-ci.org/allansachsambia/AmbsaKit.svg?branch=master)](https://travis-ci.org/allansachsambia/AmbsaKit)
 [![npm](https://img.shields.io/npm/v/ambsa-kit.svg?style=flat-square)](https://www.npmjs.com/package/ambsa-kit)
 
 React components for web development.
