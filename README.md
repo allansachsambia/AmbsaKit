@@ -1,4 +1,4 @@
-![image](https://github.com/allansachsambia/AmbsaKit/blob/master/ambsakit-logo.png?raw=true)
+![image](https://github.com/allansachsambia/AmbsaKit/blob/master/ambsakit-logo-white.png?raw=true)
 
 # Ambsa Kit
 
