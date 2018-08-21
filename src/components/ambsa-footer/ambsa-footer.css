@@ -127,6 +127,14 @@
     width: 100%;
     padding: 20px 0;
   }
+
+  .ambsa-footer .inner-wrap .copyright-section {
+    padding-left: 0px;
+  }
+
+  .ambsa-footer .inner-wrap .copyright {
+    justify-content: flex-start;
+  }
 }
 
 /* Extra Small
