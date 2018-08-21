@@ -10,14 +10,13 @@ class AmbsaNav extends Component {
     this.state = { opened: false };
   }
 
-  shouldComponentUpdate() {
-    this.closeNavIfOpen();
-    return true;
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    this.closeNavIfOpen(prevState);
   }
 
   /**
    * @method toggleNav
-   * @returns {null} - Toggles `opened` state.
+   * @returns {void} - Toggles `opened` state.
    */
   toggleNav() {
     if (this.state.opened) {
@@ -29,10 +28,10 @@ class AmbsaNav extends Component {
 
   /**
    * @method closeNavIfOpen
-   * @returns {null} - Sets `opened` state to false only if it is set to true.
+   * @returns {void} - Sets `opened` state to false only if it is set to true.
    */
-  closeNavIfOpen() {
-    if (this.state.opened) {
+  closeNavIfOpen(prevState) {
+    if (prevState.opened) {
       this.setState({ opened: false });
     }
   }
