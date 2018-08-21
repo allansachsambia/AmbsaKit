@@ -18,7 +18,7 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "eslint -c ./.eslintrc.js ./src",
     "start": "webpack-dev-server --mode development",
-    "test": "jest --watch --verbose false"
+    "test": "jest"
   },
   "dependencies": {
     "prop-types": "~15.6.1",
