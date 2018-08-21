@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: test/AmbsaFooter.test.js</title>
+    <title>JSDoc: Source: test/AmbsaNav.test.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: test/AmbsaFooter.test.js</h1>
+    <h1 class="page-title">Source: test/AmbsaNav.test.js</h1>
 
     
 
@@ -29,7 +29,7 @@
             <pre class="prettyprint source linenums"><code>import React from "react";
 import { shallow } from "enzyme";
 import { findByTestAttr, checkProps } from "./testUtils";
-import AmbsaFooter from "../src/components/ambsa-footer/AmbsaFooter";
+import AmbsaNav from "../src/components/ambsa-nav/AmbsaNav";
 
 /**
  * Factory function to create a ShallowWrapper for the AmbsaFooter component
@@ -39,7 +39,7 @@ import AmbsaFooter from "../src/components/ambsa-footer/AmbsaFooter";
  * @returns {ShallowWrapper}
  */
 const setup = (props = {}, state = null) => {
-  const wrapper = shallow(&lt;AmbsaFooter {...props} />);
+  const wrapper = shallow(&lt;AmbsaNav {...props} />);
   if (state) wrapper.setState(state);
   return wrapper;
 };
@@ -49,44 +49,38 @@ const setup = (props = {}, state = null) => {
  */
 test("renders without errors", () => {
   const wrapper = setup();
-  const ambsaFooterComponent = findByTestAttr(
-    wrapper,
-    "component-ambsa-footer"
-  );
-  expect(ambsaFooterComponent.length).toBe(1);
+  const ambsaNavComponent = findByTestAttr(wrapper, "component-ambsa-nav");
+  expect(ambsaNavComponent.length).toBe(1);
 });
 
 /**
- * About Prop Tests
+ * Opened State
  */
-describe("check 'about' prop values on ambsa-footer", () => {
-  test("does not throw a warning with expected props types", () => {
-    const expectedProps = { about: "" };
-    checkProps(AmbsaFooter, expectedProps);
+describe("Opened state", () => {
+  test("Opened state is initially set to false", () => {
+    const wrapper = setup();
+    const openedState = wrapper.state("opened");
+    expect(openedState).toBe(false);
   });
 
-  test("it nests the about prop text inside the component with the data-test attribute value of component-ambsa-footer-about", () => {
-    const txt = "Lorem ipsum dolor sit amet.";
-    const wrapper = setup({ about: txt });
-    const el = findByTestAttr(wrapper, "component-ambsa-footer-about");
-    expect(el.text()).toBe(txt);
-  });
-});
-
-/**
- * Copyright Prop Tests
- */
-describe("check 'copyright' prop values on ambsa-footer", () => {
-  test("does not throw a warning with expected props types", () => {
-    const expectedProps = { copyright: "" };
-    checkProps(AmbsaFooter, expectedProps);
+  test("Opened state is set to true after pancake element is clicked", () => {
+    const wrapper = setup({});
+    const el = findByTestAttr(wrapper, "component-pancake");
+    el.simulate("click");
+    wrapper.update();
+    const counterStateAfterFirstClick = wrapper.state("opened");
+    expect(counterStateAfterFirstClick).toBe(true);
   });
 
-  test("it nests the copyright prop text inside the component with the data-test attribute value of component-ambsa-footer-copyright", () => {
-    const txt = "Lorem ipsum dolor sit amet.";
-    const wrapper = setup({ copyright: txt });
-    const el = findByTestAttr(wrapper, "component-ambsa-footer-copyright");
-    expect(el.text()).toBe(txt);
+  test("Opened state is set to false again after pancake element is clicked a second time", () => {
+    const wrapper = setup({});
+    const el = findByTestAttr(wrapper, "component-pancake");
+    el.simulate("click");
+    wrapper.update();
+    el.simulate("click");
+    wrapper.update();
+    const counterStateAfterFirstClick = wrapper.state("opened");
+    expect(counterStateAfterFirstClick).toBe(false);
   });
 });
 </code></pre>
