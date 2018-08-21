@@ -1,3 +1,27 @@
+.ambsa-logo {
+  fill: none;
+  stroke: #555555;
+  stroke-width: 1px !important;
+}
+
+.ambsa-logo .iris,
+.ambsa-logo .head-and-body {
+  fill: #ffffff;
+}
+
+.ambsa-logo .eyes,
+.ambsa-logo .eyeball {
+  fill: #ffffff;
+}
+
+.ambsa-logo .whiskers {
+  stroke: #555555;
+}
+
+.ambsa-logo .ball-of-yarn {
+  stroke: #555555;
+}
+
 /* Medium
    ========================================================================== */
 @media (max-width: 1300px) {

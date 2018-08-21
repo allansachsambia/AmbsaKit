@@ -4,9 +4,9 @@
   margin-top: 40px;
 }
 
-.ambsa-kit .main-logo-wrap .ambsa-kit-logo {
-  height: 300px;
-  width: 300px;
+.ambsa-kit .main-logo-wrap .ambsa-logo {
+  height: 150px;
+  width: 150px;
 }
 
 .ambsa-kit .ambsa-kit-buttons {
@@ -43,6 +43,35 @@
 
 .ambsa-kit .ambsa-kit-links ul {
   padding: 0px;
+}
+
+.ambsa-kit .example-footer {
+  margin-bottom: 20px;
+}
+
+.ambsa-kit .link-logos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.ambsa-kit .link-logos .github-logo,
+.ambsa-kit .link-logos .npm-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.ambsa-kit .copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ambsa-kit .copyright span {
+  margin-right: 5px;
 }
 
 /* Medium

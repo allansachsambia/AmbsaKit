@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import ExampleFooter from "./../components/ExampleFooter";
-import AmbsaKitLogo from "./../svgs/AmbsaKitLogo";
+import AmbsaLogo from "./../svgs/AmbsaLogo";
+import GithubLogo from "./../svgs/GithubLogo";
+import NPMLogo from "./../svgs/NPMLogo";
 import Styles from "./home.css";
 
 export default class Home extends React.Component {
@@ -21,19 +22,22 @@ export default class Home extends React.Component {
     return (
       <div className="ambsa-kit">
         <div className="main-logo-wrap">
-          <AmbsaKitLogo />
+          <AmbsaLogo />
         </div>
         <div className="ambsa-kit-title">AmbsaKit</div>
         <div className="ambsa-kit-subtitle">
-          A collection of react components for use in web development.
+          React components for web development.
         </div>
         <div className="ambsa-kit-buttons">
           <div className="ambsa-kit-buttons-inner-wrap">
-            <Link to={"/ambsa-hero"}>
+            <Link to={"/ambsa-hero"} target="_blank">
               <button>AmbsaHero</button>
             </Link>
-            <Link to={"/ambsa-footer"}>
+            <Link to={"/ambsa-footer"} target="_blank">
               <button>AmbsaFooter</button>
+            </Link>
+            <Link to={"/ambsa-nav"} target="_blank">
+              <button>AmbsaNav</button>
             </Link>
           </div>
         </div>
@@ -49,7 +53,27 @@ export default class Home extends React.Component {
             </li>
           </ul>
         </div>
-        <ExampleFooter />
+        <div className="example-footer">
+          <div className="link-logos">
+            <a
+              href="https://github.com/allansachsambia/AmbsaKit"
+              target="_blank"
+            >
+              <GithubLogo />
+            </a>
+            <a href="https://www.npmjs.com/package/ambsa-kit" target="_blank">
+              <NPMLogo />
+            </a>
+          </div>
+          <div className="copyright">
+            <a
+              href="https://github.com/allansachsambia/AmbsaKit/blob/master/LICENSE"
+              target="_blank"
+            >
+              Copyright © 2018 Allan Sachs-Ambia
+            </a>
+          </div>
+        </div>
       </div>
     );
   }

@@ -5,6 +5,7 @@ import ScrollToTopRoute from "./ScrollToTopRoute";
 import Home from "./scenes/Home";
 import AmbsaHero from "./scenes/AmbsaHero";
 import AmbsaFooter from "./scenes/AmbsaFooter";
+import AmbsaNav from "./scenes/AmbsaNav";
 
 export default class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class App extends React.Component {
         <Switch>
           <ScrollToTopRoute exact path={"/"} component={Home} />
           <ScrollToTopRoute exact path={"/ambsa-hero"} component={AmbsaHero} />
+          <ScrollToTopRoute exact path={"/ambsa-nav"} component={AmbsaNav} />
           <ScrollToTopRoute
             exact
             path={"/ambsa-footer"}
