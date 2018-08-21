@@ -31,8 +31,8 @@ git clone https://github.com/allansachsambia/AmbsaKit.git
 ### CodeSandbox Links with Examples
 
 - [AmbsaHero](https://codesandbox.io/s/w79zppvv7l)
-- [AmbsaFooter](https://codesandbox.io/s/zrz5rjjw6x)
-- AmbsaNav ...Pending
+- [AmbsaFooter](https://codesandbox.io/s/wkv6p61748)
+- [AmbsaNav](https://codesandbox.io/s/w6zpwkz1vk)
 
 ### Ambsa Hero
 
