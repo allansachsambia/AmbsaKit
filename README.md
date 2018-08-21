@@ -2,17 +2,22 @@
 
 # Ambsa Kit
 
+[![npm](https://img.shields.io/npm/v/ambsa-kit.svg?style=flat-square)](https://www.npmjs.com/package/ambsa-kit)
+
 React components for web development.
 
-### Table of Contents
+## Table of Contents
 
 - [Installation](#installation)
-- [Example](#example)
-- [AmbsaHero](#ambsa-hero)
-- [AmbsaFooter](#ambsa-footer)
-- [AmbsaNav](#ambsa-nav)
+- [Examples](#examples)
+  - [CodeSandbox Examples](#codesandbox-examples)
+  - [Build Local Examples](#build-local-examples)
+- [Components](#components)
+  - [AmbsaHero](#ambsa-hero)
+  - [AmbsaFooter](#ambsa-footer)
+  - [AmbsaNav](#ambsa-nav)
 
-### Installation
+## Installation
 
 To install:
 
@@ -20,25 +25,29 @@ To install:
 npm install ambsa-kit
 ```
 
-### Example
+## Examples
 
-To build an example locally first clone the project:
-
-```
-git clone https://github.com/allansachsambia/AmbsaKit.git
-```
-
-### CodeSandbox Links with Examples
+### CodeSandbox Examples
 
 - [AmbsaHero](https://codesandbox.io/s/w79zppvv7l)
 - [AmbsaFooter](https://codesandbox.io/s/wkv6p61748)
 - [AmbsaNav](https://codesandbox.io/s/w6zpwkz1vk)
 
+### Build Local Examples
+
+To build an example clone the project, run the installer and start the app:
+
+```
+git clone https://github.com/allansachsambia/AmbsaKit.git
+```
+
+## Components
+
 ### Ambsa Hero
 
 ![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-hero/with-children/desktop.png?raw=true)
 
-#### Use
+##### Use
 
 ```
 import { AmbsaNav } from "ambsa-kit";
@@ -67,7 +76,7 @@ export default class Index extends React.Component {
 }
 ```
 
-#### Properties
+##### Properties
 
 Property        |       Type            |       Description
 :---------------|:----------------------|:--------------------------------
@@ -75,11 +84,11 @@ image           | String                | optional; background image url
 stick           | String                | optional; background-position position helper for the background image limited to max-width: 1300px.  Options: '***left***', '***center***', and '***right***'
 brightness      | String                | optional; sets the brightness of the background image. Options: '***darker***', '***dark***', '***light***', and '***lighter***'.
 
-## Ambsa Footer
+### Ambsa Footer
 
 ![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-footer/desktop.png?raw=true)
 
-#### Use
+##### Use
 
 AmbsaFooter takes two values as attributes: `about` adds content under
 the about section, and `copyright` adds copyright content to the bottom of
@@ -143,21 +152,21 @@ export default class Index extends React.Component {
 }
 ```
 
-#### Properties
+##### Properties
 
 Property        |       Type            |       Description
 :---------------|:----------------------|:--------------------------------
 about           | String                | optional; a short website description
 copyright       | String                | optional; copyright text
 
-## Ambsa Nav
+### Ambsa Nav
 
 <!-- Pending -->
 ![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-nav/ambsa-nav-closed.png?raw=true)
 
 ![image](https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-nav/ambsa-nav-opened.png?raw=true)
 
-#### Use
+##### Use
 
 AmbsaNav takes one prop named 'brand' which expects an image wrapped in jsx.  
 This element can be resized and styled. The child elements passed in will end
@@ -201,7 +210,7 @@ export default function App() {
 
 ```
 
-#### Properties
+##### Properties
 
 Property        |       Type            |       Description
 :---------------|:----------------------|:--------------------------------
