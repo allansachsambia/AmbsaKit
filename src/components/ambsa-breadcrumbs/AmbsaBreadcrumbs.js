@@ -17,7 +17,6 @@ class AmbsaBreadcrumbs extends React.Component {
    * head breadcrumb.
    */
   renderHeadBreadcrumb(child) {
-    console.log(typeof child);
     return (
       <div
         data-test="component-ambsa-breadcrumb-head"
