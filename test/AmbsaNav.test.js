@@ -26,6 +26,16 @@ test("renders without errors", () => {
 });
 
 /**
+ * Props Tests
+ */
+describe("check 'about' prop values on ambsa-footer", () => {
+  test("does not throw a warning with expected props types", () => {
+    const expectedProps = { brand: {} };
+    checkProps(AmbsaNav, expectedProps);
+  });
+});
+
+/**
  * Opened State
  */
 describe("Opened state", () => {

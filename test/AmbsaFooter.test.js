@@ -29,7 +29,7 @@ test("renders without errors", () => {
 });
 
 /**
- * About Prop Tests
+ * Props Tests
  */
 describe("check 'about' prop values on ambsa-footer", () => {
   test("does not throw a warning with expected props types", () => {

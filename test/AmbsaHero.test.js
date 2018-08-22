@@ -26,7 +26,7 @@ test("renders without errors", () => {
 });
 
 /**
- * Image Prop Tests
+ * Props Tests
  */
 describe("check image prop values on ambsa-hero", () => {
   test("does not throw a warning with expected props types", () => {
