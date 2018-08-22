@@ -39,6 +39,9 @@ export default class Home extends React.Component {
             <Link to={"/ambsa-nav"} target="_blank">
               <button>AmbsaNav</button>
             </Link>
+            <Link to={"/ambsa-breadcrumbs"} target="_blank">
+              <button>AmbsaBreadcrumbs</button>
+            </Link>
           </div>
         </div>
         <div className="ambsa-kit-links">

@@ -6,6 +6,7 @@ import Home from "./scenes/Home";
 import AmbsaHero from "./scenes/AmbsaHero";
 import AmbsaFooter from "./scenes/AmbsaFooter";
 import AmbsaNav from "./scenes/AmbsaNav";
+import AmbsaBreadcrumbs from "./scenes/AmbsaBreadcrumbs";
 
 export default class App extends React.Component {
   render() {
@@ -19,6 +20,11 @@ export default class App extends React.Component {
             exact
             path={"/ambsa-footer"}
             component={AmbsaFooter}
+          />
+          <ScrollToTopRoute
+            exact
+            path={"/ambsa-breadcrumbs"}
+            component={AmbsaBreadcrumbs}
           />
         </Switch>
       </BrowserRouter>

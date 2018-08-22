@@ -1,0 +1,32 @@
+.ambsa-kit {
+  padding: 20px;
+}
+
+.ambsa-breadcrumb .double-angle-right {
+  margin: 5px;
+}
+
+.ambsa-breadcrumbs .double-angle-right {
+  height: 11px;
+  width: 11px;
+}
+
+/* Medium
+   ========================================================================== */
+@media (max-width: 1300px) {
+}
+
+/* Small
+   ========================================================================== */
+@media (max-width: 900px) {
+}
+
+/* Extra Small
+   ========================================================================== */
+@media (max-width: 700px) {
+}
+
+/* Print
+   ========================================================================== */
+@media print {
+}

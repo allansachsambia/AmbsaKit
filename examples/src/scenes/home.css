@@ -19,6 +19,7 @@
 .ambsa-kit .ambsa-kit-buttons-inner-wrap {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 400px;
 }
 
