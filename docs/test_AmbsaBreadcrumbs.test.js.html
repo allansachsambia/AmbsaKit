@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: test/testUtils.js</title>
+    <title>JSDoc: Source: test/AmbsaBreadcrumbs.test.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: test/testUtils.js</h1>
+    <h1 class="page-title">Source: test/AmbsaBreadcrumbs.test.js</h1>
 
     
 
@@ -26,27 +26,45 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import checkPropTypes from "check-prop-types";
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import { shallow } from "enzyme";
+import { findByTestAttr, checkProps } from "./testUtils";
+import AmbsaBreadcrumbs from "../src/components/ambsa-breadcrumbs/AmbsaBreadcrumbs";
 
 /**
- * Return node(s) with the given data-test attribute.
- * @param {ShallowWrapper} wrapper - Enzyme shallow wrapper.
- * @param {string} val - Value of data-test attribute for search.
+ * Factory function to create a ShallowWrapper for the AmbsaBreadcrumbs component
+ * @function setup
+ * @param {object} props - Component props specific to this setup.
+ * @param {any} state = Initial state for setup.
  * @returns {ShallowWrapper}
  */
-export const findByTestAttr = (wrapper, val) => {
-  return wrapper.find(`[data-test="${val}"]`);
+const setup = (props = {}, state = null) => {
+  const wrapper = shallow(&lt;AmbsaBreadcrumbs {...props} />);
+  if (state) wrapper.setState(state);
+  return wrapper;
 };
 
-export const checkProps = (component, conformingProps) => {
-  const propError = checkPropTypes(
-    component.propTypes,
-    conformingProps,
-    "prop",
-    component.name
+/**
+ * Rendering Test
+ */
+test("renders without errors", () => {
+  const wrapper = setup();
+  const ambsaBreadcrumbsComponent = findByTestAttr(
+    wrapper,
+    "component-ambsa-breadcrumbs"
   );
-  expect(propError).toBeUndefined();
-};
+  expect(ambsaBreadcrumbsComponent.length).toBe(1);
+});
+
+/**
+ * Props Tests
+ */
+describe("check 'about' prop values on ambsa-footer", () => {
+  test("does not throw a warning with expected props types", () => {
+    const expectedProps = { separator: {} };
+    checkProps(AmbsaBreadcrumbs, expectedProps);
+  });
+});
 </code></pre>
         </article>
     </section>

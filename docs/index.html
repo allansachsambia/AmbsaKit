@@ -45,7 +45,8 @@
     <section>
         <article><p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/ambsakit-logo-white.png?raw=true" alt="image"></p>
 <h1>Ambsa Kit</h1><p><a href="https://travis-ci.org/allansachsambia/AmbsaKit"><img src="https://travis-ci.org/allansachsambia/AmbsaKit.svg?branch=master" alt="Build Status"></a>
-<a href="https://www.npmjs.com/package/ambsa-kit"><img src="https://img.shields.io/npm/v/ambsa-kit.svg?style=flat-square" alt="npm"></a></p>
+<a href="https://www.npmjs.com/package/ambsa-kit"><img src="https://img.shields.io/npm/v/ambsa-kit.svg?style=flat-square" alt="npm"></a>
+<a href="https://david-dm.org/neptunian/react-photo-gallery"><img src="https://david-dm.org/neptunian/react-photo-gallery.svg" alt="Dependency Status"></a></p>
 <p>React components for web development.</p>
 <h2>Table of Contents</h2><ul>
 <li><a href="#installation">Installation</a></li>
@@ -58,6 +59,7 @@
 <li><a href="#ambsa-hero">AmbsaHero</a></li>
 <li><a href="#ambsa-footer">AmbsaFooter</a></li>
 <li><a href="#ambsa-nav">AmbsaNav</a></li>
+<li><a href="#ambsa-breadcrumbs">AmbsaBreadcrumbs</a></li>
 </ul>
 </li>
 </ul>
@@ -66,6 +68,7 @@
 <li><a href="https://codesandbox.io/s/w79zppvv7l">AmbsaHero</a></li>
 <li><a href="https://codesandbox.io/s/wkv6p61748">AmbsaFooter</a></li>
 <li><a href="https://codesandbox.io/s/w6zpwkz1vk">AmbsaNav</a></li>
+<li>AmbsaBreadcrumbs ...Pending</li>
 </ul>
 <h3>Build Local Examples</h3><p>To build an example clone the project, run the installer and start the app:</p>
 <pre class="prettyprint source"><code>git clone https://github.com/allansachsambia/AmbsaKit.git</code></pre><h2>Components</h2><h3>Ambsa Hero</h3><p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-hero/with-children/desktop.png?raw=true" alt="image"></p>
@@ -200,7 +203,7 @@ export default class Index extends React.Component {
 <h3>Ambsa Nav</h3><!-- Pending -->
 <p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-nav/ambsa-nav-closed.png?raw=true" alt="image"></p>
 <p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-nav/ambsa-nav-opened.png?raw=true" alt="image"></p>
-<h5>Use</h5><p>AmbsaNav takes one prop named 'brand' which expects an image wrapped in jsx.<br>This element can be resized and styled. The child elements passed in will end
+<h5>Use</h5><p>AmbsaNav takes one prop named 'brand' which expects an image passed in as JSX.<br>This element can be resized and styled. The child elements passed in will end
 up as the content in the center of the menu area after the pancake button has
 been clicked and the navbar expanded, for example: a list of links, with a
 title.</p>
@@ -209,7 +212,7 @@ import { AmbsaNav } from &quot;ambsa-kit&quot;;
 
 export default function App() {
   return (
-    &lt;div className=&quot;ambsa-kit&quot;>
+    &lt;div>
       &lt;AmbsaNav brand={&lt;BallOfYarn />}>
         &lt;div className=&quot;menu-title&quot;>MENU&lt;/div>
         &lt;ul>
@@ -248,7 +251,42 @@ export default function App() {
 <tr>
 <td style="text-align:left">brand</td>
 <td style="text-align:left">Object</td>
-<td style="text-align:left">optional; an image wrapped in JSX</td>
+<td style="text-align:left">optional; an image passed in as JSX</td>
+</tr>
+</tbody>
+</table>
+<h3>Ambsa Breadcrumbs</h3><!-- Pending -->
+<p><img src="https://github.com/allansachsambia/AmbsaKit/blob/master/_mockups/ambsa-breadcrumbs/All.png?raw=true" alt="image"></p>
+<h5>Use</h5><p>Nest links and span elements inside AmbsaBreadcrumbs to make breadcrumbs.  To
+change separators just pass your JSX svg image or plain <img> in as the value
+of the separator attribute and override the styles to resize.</p>
+<pre class="prettyprint source"><code>import { AmbsaBreadcrumbs } from &quot;ambsa-kit&quot;;
+
+export default function App() {
+  return (
+    &lt;div>
+      &lt;AmbsaBreadcrumbs>
+        &lt;a href=&quot;#&quot;>Link 1&lt;/a>
+        &lt;a href=&quot;#&quot;>Link 2&lt;/a>
+        &lt;a href=&quot;#&quot;>Link 3&lt;/a>
+        &lt;a href=&quot;#&quot;>Link 4&lt;/a>
+        &lt;span>Link 5&lt;/span>
+      &lt;/AmbsaBreadcrumbs>
+    &lt;/div>
+  );
+}</code></pre><h5>Properties</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">separator</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">optional; an image passed in as JSX</td>
 </tr>
 </tbody>
 </table></article>
@@ -262,13 +300,13 @@ export default function App() {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ambsaHeroStyle">ambsaHeroStyle</a></li><li><a href="global.html#brightness">brightness</a></li><li><a href="global.html#closeNavIfOpen">closeNavIfOpen</a></li><li><a href="global.html#findByTestAttr">findByTestAttr</a></li><li><a href="global.html#setup">setup</a></li><li><a href="global.html#stick">stick</a></li><li><a href="global.html#toggleNav">toggleNav</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ambsaHeroStyle">ambsaHeroStyle</a></li><li><a href="global.html#brightness">brightness</a></li><li><a href="global.html#closeNavIfOpen">closeNavIfOpen</a></li><li><a href="global.html#findByTestAttr">findByTestAttr</a></li><li><a href="global.html#renderBodyBreadcrumb">renderBodyBreadcrumb</a></li><li><a href="global.html#renderBreadcrumbBlock">renderBreadcrumbBlock</a></li><li><a href="global.html#renderHeadBreadcrumb">renderHeadBreadcrumb</a></li><li><a href="global.html#renderTailBreadcrumb">renderTailBreadcrumb</a></li><li><a href="global.html#setup">setup</a></li><li><a href="global.html#stick">stick</a></li><li><a href="global.html#toggleNav">toggleNav</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Aug 21 2018 15:30:42 GMT-0400 (EDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Aug 22 2018 16:58:27 GMT-0400 (EDT)
 </footer>
 
 <script> prettyPrint(); </script>
