@@ -6,7 +6,7 @@ import "./ambsa-breadcrumbs.css";
 
 export default function App() {
   return (
-    <div className="ambsa-kit">
+    <div className="ambsa-kit ambsa-kit-breadcrumbs">
       <AmbsaBreadcrumbs>
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>

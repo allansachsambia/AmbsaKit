@@ -9,7 +9,7 @@ const copyright = "Copyright © 2018 Allan Sachs-Ambia";
 
 export default function App() {
   return (
-    <div className="ambsa-kit">
+    <div className="ambsa-kit ambsa-kit-footer">
       <AmbsaFooter about={about} copyright={copyright}>
         <div className="explore">
           <span>

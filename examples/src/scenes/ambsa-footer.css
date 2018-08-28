@@ -1,21 +1,21 @@
-.ambsa-kit .ambsa-footer {
+.ambsa-kit-footer .ambsa-footer {
   background: #121212;
   color: #555555;
 }
 
-.ambsa-kit .ambsa-footer a:link {
+.ambsa-kit-footer .ambsa-footer a:link {
   color: #999999;
 }
 
-.ambsa-kit .ambsa-footer a:visited {
+.ambsa-kit-footer .ambsa-footer a:visited {
   color: #999999;
 }
 
-.ambsa-kit .ambsa-footer a:hover {
+.ambsa-kit-footer .ambsa-footer a:hover {
   color: #bbbbbb;
 }
 
-.ambsa-kit .ambsa-footer a:active {
+.ambsa-kit-footer .ambsa-footer a:active {
   color: #777777;
 }
 

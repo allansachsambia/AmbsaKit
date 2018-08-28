@@ -1,34 +1,34 @@
-.ambsa-nav {
+.ambsa-kit-nav {
   background: #000000;
 }
 
 /* Brand */
 
-.ambsa-nav .brand .ball-of-yarn {
+.ambsa-kit-nav .brand .ball-of-yarn {
   height: 50px !important;
   width: 50px !important;
 }
 
-.ambsa-nav .brand .ball-of-yarn,
-.ambsa-nav .brand .ball-of-yarn * {
+.ambsa-kit-nav .brand .ball-of-yarn,
+.ambsa-kit-nav .brand .ball-of-yarn * {
   fill: none;
 }
 
-.ambsa-nav .brand .ball-of-yarn {
+.ambsa-kit-nav .brand .ball-of-yarn {
   margin: 15px;
 }
 
-.ambsa-nav .brand .ball-of-yarn {
+.ambsa-kit-nav .brand .ball-of-yarn {
   stroke: #ffffff;
 }
 
 /* List Wrap */
 
-.ambsa-nav .list-wrap .menu-title {
+.ambsa-kit-nav .list-wrap .menu-title {
   font-size: 50px;
 }
 
-.ambsa-nav .list-wrap .menu-title {
+.ambsa-kit-nav .list-wrap .menu-title {
   font-size: 50px;
 }
 

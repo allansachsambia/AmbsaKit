@@ -20,54 +20,74 @@ export default class Home extends React.Component {
     const image2 = "elizabeth-lies-190771-unsplash.jpg";
     const { about, copyright, icons } = this.renderSiteMap();
     return (
-      <div className="ambsa-kit">
-        <div className="main-logo-wrap">
-          <AmbsaLogo />
-        </div>
-        <div className="ambsa-kit-title">AmbsaKit</div>
-        <div className="ambsa-kit-subtitle">
-          React components for web development.
-        </div>
-        <div className="ambsa-kit-buttons">
-          <div className="ambsa-kit-buttons-inner-wrap">
-            <Link to={"/ambsa-hero"} target="_blank">
-              <button>AmbsaHero</button>
-            </Link>
-            <Link to={"/ambsa-footer"} target="_blank">
-              <button>AmbsaFooter</button>
-            </Link>
-            <Link to={"/ambsa-nav"} target="_blank">
-              <button>AmbsaNav</button>
-            </Link>
-            <Link to={"/ambsa-breadcrumbs"} target="_blank">
-              <button>AmbsaBreadcrumbs</button>
-            </Link>
+      <div className="ambsa-kit ambsa-kit-home">
+        <div className="main-outer-wrap">
+          <div className="main-inner-wrap">
+            <div className="ambsa-kit-title">AmbsaKit</div>
+            <div className="ambsa-column-wrap">
+              <div className="home-column">
+                <h4>About</h4>
+                <ul>
+                  <li>
+                    <span>React components for web development.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="home-column">
+                <h4>Components</h4>
+                <ul>
+                  <li>
+                    <Link to={"/ambsa-hero"} target="_blank">
+                      Hero
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/ambsa-footer"} target="_blank">
+                      Footer
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/ambsa-nav"} target="_blank">
+                      Nav
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/ambsa-breadcrumbs"} target="_blank">
+                      Breadcrumbs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/ambsa-article"} target="_blank">
+                      Article
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="home-column">
+                <h4>Links</h4>
+                <ul>
+                  <li>
+                    <a
+                      href="https://github.com/allansachsambia/AmbsaKit"
+                      target="_blank"
+                    >
+                      Github
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.npmjs.com/package/ambsa-kit"
+                      target="_blank"
+                    >
+                      NPM
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="ambsa-kit-links">
-          <ul>
-            <li>
-              <a
-                href="https://github.com/allansachsambia/AmbsaKit/blob/master/README.md"
-                target="_blank"
-              >
-                README.md
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="example-footer">
-          <div className="link-logos">
-            <a
-              href="https://github.com/allansachsambia/AmbsaKit"
-              target="_blank"
-            >
-              <GithubLogo />
-            </a>
-            <a href="https://www.npmjs.com/package/ambsa-kit" target="_blank">
-              <NPMLogo />
-            </a>
-          </div>
+        <div className="home-footer">
           <div className="copyright">
             <a
               href="https://github.com/allansachsambia/AmbsaKit/blob/master/LICENSE"

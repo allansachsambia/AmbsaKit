@@ -4,14 +4,14 @@ import { AmbsaHero } from "./../../../src/";
 import "./ambsa-hero.css";
 
 const image =
-  "https://uploads.codesandbox.io/uploads/user/ce8b0558-84ae-4d88-a911-56e82396860f/Aiw6-joanna-kosinska-453787-unsplash.jpg";
+  "https://github.com/allansachsambia/AmbsaKit/blob/master/examples/src/media/joanna-kosinska-453787-unsplash.jpg?raw=true";
 const about =
   "Qui ipsum elit ex fabulas. In dolore occaecat si cillum proident an velit velit, si ubi ipsum enim export, esse singulis est summis legam, est ad familiaritatem, est id enim nescius, voluptate export quibusdam cernantur non consequat ab esse.";
 const copyright = "Copyright © 2018 Allan Sachs-Ambia";
 
 export default function App() {
   return (
-    <div className="ambsa-kit">
+    <div className="ambsa-kit ambsa-kit-hero">
       <AmbsaHero image={image} stick="right">
         <div>
           <h1 className="ambsa-hero-display">Lorem Ipsum</h1>

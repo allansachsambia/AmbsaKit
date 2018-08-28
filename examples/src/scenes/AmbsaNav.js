@@ -6,7 +6,7 @@ import Styles from "./ambsa-nav.css";
 
 export default function App() {
   return (
-    <div className="ambsa-kit">
+    <div className="ambsa-kit ambsa-kit-nav">
       <AmbsaNav brand={<BallOfYarn />}>
         <div className="menu-title">MENU</div>
         <ul>
