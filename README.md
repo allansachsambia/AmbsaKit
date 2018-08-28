@@ -36,7 +36,7 @@ npm install ambsa-kit
 - [AmbsaFooter](https://codesandbox.io/s/wkv6p61748)
 - [AmbsaNav](https://codesandbox.io/s/w6zpwkz1vk)
 - [AmbsaBreadcrumbs](https://codesandbox.io/s/rroz2616zq)
-- [AmbsaArticle](https://codesandbox.io/s/0087npnm2w)
+- [AmbsaArticle](https://codesandbox.io/s/kwpvx54mr3)
 
 ### Build Local Examples
 
