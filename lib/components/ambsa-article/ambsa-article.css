@@ -1,5 +1,5 @@
 .ambsa-article {
-  background: #191919;
+  background: #ffffff;
   min-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,25 +14,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #c3c3c3;
+  color: #000000;
 }
 
 .ambsa-article .header {
-  width: 100vw;
+  max-height: 900px;
+  overflow: hidden;
 }
 
-.ambsa-article .header-image {
+.ambsa-article .header .header-image {
   width: 100vw;
-}
-
-.ambsa-article .body {
-  line-height: 30px;
 }
 
 .ambsa-article .content {
   max-width: 1440px;
   width: 95vw;
-  background: #191919;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,9 +38,9 @@
           justify-content: flex-end;
 }
 
-.ambsa-article .main {
-  border-top: 10px solid #131313;
-  background: #191919;
+.ambsa-article .content .main {
+  border-top: 10px solid #000000;
+  background: #ffffff;
   padding: 20px;
   padding-right: 180px;
   width: 70%;
@@ -52,7 +49,11 @@
   position: relative;
 }
 
-.ambsa-article .title {
+.ambsa-article .content .main .body {
+  line-height: 30px;
+}
+
+.ambsa-article .content .main .title {
   font-weight: bold;
   font-style: italic;
   font-size: 55px;
@@ -68,7 +69,7 @@
 /* ----------------------------------- MD ----------------------------------- */
 
 @media (max-width: 1300px) {
-  .ambsa-article .main {
+  .ambsa-article .content .main {
     font-size: 17px;
     width: 90%;
     padding-right: 80px;
@@ -86,11 +87,11 @@
             justify-content: center;
   }
 
-  .ambsa-article .main {
+  .ambsa-article .content .main {
     padding-right: 40px;
   }
 
-  .ambsa-article .title {
+  .ambsa-article .content .main .title {
     font-size: 40px;
   }
 }
@@ -98,12 +99,12 @@
 /* ----------------------------------- XS ----------------------------------- */
 
 @media (max-width: 700px) {
-  .ambsa-article .header-image {
+  .ambsa-article .header .header-image {
     width: 100%;
     min-height: 100px;
   }
 
-  .ambsa-article .main {
+  .ambsa-article .content .main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
