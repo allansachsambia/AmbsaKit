@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: test/AmbsaNav.test.js</title>
+    <title>JSDoc: Source: test/AmbsaArticle.test.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: test/AmbsaNav.test.js</h1>
+    <h1 class="page-title">Source: test/AmbsaArticle.test.js</h1>
 
     
 
@@ -29,17 +29,17 @@
             <pre class="prettyprint source linenums"><code>import React from "react";
 import { shallow } from "enzyme";
 import { findByTestAttr, checkProps } from "./testUtils";
-import AmbsaNav from "../src/components/ambsa-nav/AmbsaNav";
+import AmbsaArticle from "../src/components/ambsa-article/AmbsaArticle";
 
 /**
- * Factory function to create a ShallowWrapper for the AmbsaFooter component
+ * Factory function to create a ShallowWrapper for the AmbsaArticle component
  * @function setup
  * @param {object} props - Component props specific to this setup.
  * @param {any} state = Initial state for setup.
  * @returns {ShallowWrapper}
  */
 const setup = (props = {}, state = null) => {
-  const wrapper = shallow(&lt;AmbsaNav {...props} />);
+  const wrapper = shallow(&lt;AmbsaArticle {...props} />);
   if (state) wrapper.setState(state);
   return wrapper;
 };
@@ -49,48 +49,20 @@ const setup = (props = {}, state = null) => {
  */
 test("renders without errors", () => {
   const wrapper = setup();
-  const ambsaNavComponent = findByTestAttr(wrapper, "component-ambsa-nav");
-  expect(ambsaNavComponent.length).toBe(1);
+  const ambsaArticleComponent = findByTestAttr(
+    wrapper,
+    "component-ambsa-article"
+  );
+  expect(ambsaArticleComponent.length).toBe(1);
 });
 
 /**
  * Props Tests
  */
-describe("check 'about' prop values on ambsa-footer", () => {
+describe("check 'about' prop values on ambsa-article", () => {
   test("does not throw a warning with expected props types", () => {
-    const expectedProps = { brand: {} };
-    checkProps(AmbsaNav, expectedProps);
-  });
-});
-
-/**
- * Opened State
- */
-describe("Opened state", () => {
-  test("Opened state is initially set to false", () => {
-    const wrapper = setup();
-    const openedState = wrapper.state("opened");
-    expect(openedState).toBe(false);
-  });
-
-  test("Opened state is set to true after pancake element is clicked", () => {
-    const wrapper = setup({});
-    const el = findByTestAttr(wrapper, "component-pancake");
-    el.simulate("click");
-    wrapper.update();
-    const counterStateAfterFirstClick = wrapper.state("opened");
-    expect(counterStateAfterFirstClick).toBe(true);
-  });
-
-  test("Opened state is set to false again after pancake element is clicked a second time", () => {
-    const wrapper = setup({});
-    const el = findByTestAttr(wrapper, "component-pancake");
-    el.simulate("click");
-    wrapper.update();
-    el.simulate("click");
-    wrapper.update();
-    const counterStateAfterFirstClick = wrapper.state("opened");
-    expect(counterStateAfterFirstClick).toBe(false);
+    const expectedProps = { title: "", image: "" };
+    checkProps(AmbsaArticle, expectedProps);
   });
 });
 </code></pre>
