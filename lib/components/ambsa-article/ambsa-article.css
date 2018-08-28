@@ -48,7 +48,7 @@
   padding-right: 180px;
   width: 70%;
   top: -50px;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
 }
 
@@ -69,6 +69,7 @@
 
 @media (max-width: 1300px) {
   .ambsa-article .main {
+    font-size: 17px;
     width: 90%;
     padding-right: 80px;
   }
