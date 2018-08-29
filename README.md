@@ -1,5 +1,3 @@
-![image](https://github.com/allansachsambia/AmbsaKit/blob/master/ambsakit-logo-white.png?raw=true)
-
 # Ambsa Kit
 
 [![Build Status](https://travis-ci.org/allansachsambia/AmbsaKit.svg?branch=master)](https://travis-ci.org/allansachsambia/AmbsaKit)

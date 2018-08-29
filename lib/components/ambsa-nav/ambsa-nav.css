@@ -6,6 +6,8 @@
   width: 100vw;
   background: #141414;
   color: #ffffff;
+  position: relative;
+  z-index: 2147483636;
 }
 
 /* Pancake */
@@ -67,7 +69,6 @@
 
 .ambsa-nav.opened-false .list-wrap {
   display: none;
-  z-index: 2147483636;
 }
 
 /* List Wrap (Opened = True) */
