@@ -56,7 +56,7 @@
 .ambsa-footer .inner-wrap .explore-section .explore {
   display: flex;
   flex-direction: column;
-  max-height: 150px;
+  max-height: 175px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
@@ -94,10 +94,12 @@
 .ambsa-footer .copyright-section {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   text-align: center;
   font-size: 12.5px;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
+  height: 150px;
 }
 
 .ambsa-footer .copyright-section span {

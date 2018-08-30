@@ -10,7 +10,7 @@ const copyright = "Copyright © 2018 Allan Sachs-Ambia";
 export default function App() {
   return (
     <div className="ambsa-kit ambsa-kit-footer">
-      <AmbsaFooter about={about} copyright={copyright}>
+      <AmbsaFooter about={about} copyright={copyright} fadeInUp={true}>
         <div className="explore">
           <span>
             <i className="fa fa-angle-right" />
@@ -35,10 +35,6 @@ export default function App() {
           <span>
             <i className="fa fa-angle-right" />
             <a href="#">Link 6</a>
-          </span>
-          <span>
-            <i className="fa fa-angle-right" />
-            <a href="#">Link 7</a>
           </span>
         </div>
         <div className="icons">

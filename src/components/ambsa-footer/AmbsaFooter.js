@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+import Fade from "react-reveal/Fade";
+
 import Styles from "./ambsa-footer.css";
 
 class AmbsaFooter extends React.Component {
@@ -9,17 +11,21 @@ class AmbsaFooter extends React.Component {
     return (
       <footer data-test="component-ambsa-footer" className="ambsa-footer">
         <div className="inner-wrap">
-          <div className="about-section">
-            <div className="title">ABOUT</div>
-            <div data-test="component-ambsa-footer-about" className="about">
-              {about}
+          <Fade up>
+            <div className="about-section">
+              <div className="title">ABOUT</div>
+              <div data-test="component-ambsa-footer-about" className="about">
+                {about}
+              </div>
             </div>
-          </div>
+          </Fade>
 
-          <div className="explore-section">
-            <div className="title">EXPLORE</div>
-            {this.props.children}
-          </div>
+          <Fade up>
+            <div className="explore-section">
+              <div className="title">EXPLORE</div>
+              {this.props.children}
+            </div>
+          </Fade>
 
           <div className="copyright-section">
             <span
@@ -37,7 +43,8 @@ class AmbsaFooter extends React.Component {
 
 AmbsaFooter.propTypes = {
   about: PropTypes.string,
-  copyright: PropTypes.string
+  copyright: PropTypes.string,
+  fadeInUp: PropTypes.bool
 };
 
 export default AmbsaFooter;
