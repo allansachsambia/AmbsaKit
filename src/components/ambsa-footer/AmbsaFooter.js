@@ -20,12 +20,10 @@ class AmbsaFooter extends React.Component {
             </div>
           </Fade>
 
-          <Fade up>
-            <div className="explore-section">
-              <div className="title">EXPLORE</div>
-              {this.props.children}
-            </div>
-          </Fade>
+          <div className="explore-section">
+            <div className="title">EXPLORE</div>
+            {this.props.children}
+          </div>
 
           <div className="copyright-section">
             <span
