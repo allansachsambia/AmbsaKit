@@ -16,12 +16,14 @@ class AmbsaNav extends Component {
 
   /**
    * @method toggleNav
-   * @returns {void} - Toggles `opened` state.
+   * @returns {void} - Toggles `opened` state and document overflow styles.
    */
   toggleNav() {
     if (this.state.opened) {
+      document.body.style.overflow = "initial";
       this.setState({ opened: false });
     } else {
+      document.body.style.overflow = "hidden";
       this.setState({ opened: true });
     }
   }
