@@ -34,6 +34,7 @@ class AmbsaNav extends Component {
    */
   closeNavIfOpen(prevState) {
     if (prevState.opened) {
+      document.body.style.overflow = "initial";
       this.setState({ opened: false });
     }
   }
