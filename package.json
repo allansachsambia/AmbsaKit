@@ -1,10 +1,10 @@
 {
   "name": "ambsa-kit",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "React components for web development.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/allansachsambia/AmbsaKit.git"
+    "url": "https://github.com/allansachsambia/ambsa-kit.git"
   },
   "license": "ISC",
   "author": {
